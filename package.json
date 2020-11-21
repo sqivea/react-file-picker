@@ -1,0 +1,33 @@
+{
+  "name": "@mavedev/react-file-picker",
+  "version": "1.0.0",
+  "description": "Simple React file picker component for the native file input",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mavedev/react-file-picker.git"
+  },
+  "keywords": [
+    "react",
+    "react-file-picker",
+    "file-picker"
+  ],
+  "author": "Cirill Usachov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mavedev/react-file-picker/issues"
+  },
+  "homepage": "https://github.com/mavedev/react-file-picker#readme",
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "typescript": "^4.1.2"
+  }
+}
