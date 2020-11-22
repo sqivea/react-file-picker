@@ -9,6 +9,7 @@ export type FilePickerProps = {
   accept?: string | string[];
   onSuccess?: (...args: any[]) => any;
   onError?: (errorCode: InputErrorCode, ...args: any[]) => void;
+  onFilePicked: (file: File) => void;
 };
 
 /**

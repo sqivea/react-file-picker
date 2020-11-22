@@ -19,7 +19,7 @@ export function checkExtension(file: File, extensions: string[]) {
  *
  * @param {File} file File to be checked
  * @param {number} maxSize Max allowed size
- * @param {'B'|'KB'|'MB'|'GB'} sizeUnit Size unit
+ * @param {'B' | 'KB' | 'MB' | 'GB'} sizeUnit Size unit
  * @returns Ok or not
  */
 export function checkMaxSize(file: File, maxSize: number, sizeUnit: SizeUnit) {
