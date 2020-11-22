@@ -10,7 +10,8 @@
   "scripts": {
     "build": "tsc",
     "build-demo": "tsc --project ./demo/tsconfig.json && cp ./demo/src/index.html ./demo/build",
-    "demo": "npm run build && npm run build-demo && parcel ./demo/build/index.html"
+    "demo": "npm run build && npm run build-demo && parcel ./demo/build/index.html",
+    "prepare": "npm run build"
   },
   "keywords": [
     "react",
