@@ -11,7 +11,7 @@ $ yarn add @mavedev/react-file-picker
 ## Usage
 ```tsx
 import React from 'react';
-import FilePicker, { InputErrorCode } from '../../lib';
+import FilePicker, { InputErrorCode } from '@mavedev/react-file-picker';
 
 const Demo: React.FC = () => (
   <FilePicker

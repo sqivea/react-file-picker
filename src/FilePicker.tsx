@@ -18,6 +18,7 @@ import { checkExtension, checkMaxSize, usePrevious } from './utils';
  * @example
  * <FilePicker
  *   extensions={['.jpg', '.jpeg', '.png']}
+ *   onFilePicked={(file) => { console.log(`file: ${file.name}`); }}
  *   onSuccess={() => { console.log('Success'); }}
  *   onError={(code) => { console.log(`Error ${code}`); }}
  * />
