@@ -1,6 +1,6 @@
 {
   "name": "@mavedev/react-file-picker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple React file picker component for the native file input",
   "main": "lib/index.js",
   "repository": {
@@ -24,10 +24,6 @@
     "url": "https://github.com/mavedev/react-file-picker/issues"
   },
   "homepage": "https://github.com/mavedev/react-file-picker#readme",
-  "peerDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  },
   "devDependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
