@@ -9,7 +9,9 @@ const Demo: React.FC = () => (
     onFilePicked={(file) => { console.log(`File name: ${file.name}`); }}
     onSuccess={() => { console.log('Success'); }}
     onError={(code) => { printAllErrors(code); }}
-  />
+  >
+    <button type='button'>Upload file</button>
+  </FilePicker>
 );
 
 const printAllErrors = (errorCode: number) => {

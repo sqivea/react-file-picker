@@ -25,7 +25,7 @@ import { checkExtension, checkMaxSize, usePrevious } from './utils';
 const FilePicker: React.FC<FilePickerProps> = ({
   maxSize = 0, sizeUnit = 'B', extensions = [],
   onSuccess = () => {}, onError = () => {},
-  onFilePicked
+  onFilePicked, children
 }) => {
   const parsedExt = extensions instanceof Array ? extensions.join() : extensions;
   const packedExt = extensions instanceof Array ? extensions : [extensions];
@@ -55,16 +55,25 @@ const FilePicker: React.FC<FilePickerProps> = ({
     }
   }, [file]);
 
+  const fileInput = React.useRef<HTMLInputElement>(null);
+
   return (
-    <input
-      type='file'
-      accept={parsedExt}
-      onChange={(event) => {
-        if (event.target.files) {
-          setFile(event.target.files[0]);
-        }
-      }}
-    />
+    <>
+      <input
+        style={{ display: 'none' }}
+        ref={fileInput}
+        type='file'
+        accept={parsedExt}
+        onChange={(event) => {
+          if (event.target.files) {
+            setFile(event.target.files[0]);
+          }
+        }}
+      />
+      {React.cloneElement(children as React.ReactElement<any>, {
+        onClick: () => fileInput.current?.click()
+      })}
+    </>
   );
 };
 
