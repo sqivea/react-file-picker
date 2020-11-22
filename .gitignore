@@ -3,11 +3,16 @@
 /.pnp
 .pnp.js
 
+# Cache
+.cache
+
 # Testing.
 /coverage
 
-# Production.
-/build
+# Production and demo.
+/dist
+/lib
+/demo/build
 
 # Misc.
 .DS_Store

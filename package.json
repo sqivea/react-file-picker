@@ -7,6 +7,11 @@
     "type": "git",
     "url": "git+https://github.com/mavedev/react-file-picker.git"
   },
+  "scripts": {
+    "build": "tsc",
+    "build-demo": "tsc --project ./demo/tsconfig.json && cp ./demo/src/index.html ./demo/build",
+    "demo": "npm run build && npm run build-demo && parcel ./demo/build/index.html"
+  },
   "keywords": [
     "react",
     "react-file-picker",
@@ -33,6 +38,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "parcel": "^1.12.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "typescript": "^4.1.2"

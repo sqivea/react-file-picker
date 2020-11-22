@@ -1,7 +1,9 @@
-node_modules/
-public/
-dist/
-build/
+node_modules
+/public
+/dist
+/build
+/lib
+/demo
 react-app-env.d.ts
 serviceWorker.ts
 setupTests.ts

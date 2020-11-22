@@ -8,7 +8,7 @@ export type FilePickerProps = {
   sizeUnit?: SizeUnit;
   accept?: string | string[];
   onSuccess?: (...args: any[]) => any;
-  onError?: (errorCode: InputErrorCode, ...args: any[]) => void;
+  onError?: (errorCode: number, ...args: any[]) => void;
   onFilePicked: (file: File) => void;
 };
 
