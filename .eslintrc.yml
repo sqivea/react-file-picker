@@ -1,0 +1,45 @@
+env:
+  browser: true
+  es2021: true
+  node: true
+  jest: true
+
+extends: ['plugin:react/recommended', 'airbnb']
+plugins: ['react', '@typescript-eslint']
+
+settings:
+  import/resolver:
+    node:
+      moduleDirectory: ['./node_modules', './src']
+      extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.sass', '.scss']
+
+parser: '@typescript-eslint/parser'
+parserOptions:
+  sourceType: module
+  ecmaVersion: 12
+  ecmaFeatures:
+    jsx: true
+
+rules:
+  react/jsx-filename-extension: [2, extensions: ['.js', '.jsx', '.ts', 'tsx']]
+  jsx-quotes: ['error', 'prefer-single']
+  dot-notation: off
+  comma-dangle: off
+  arrow-body-style: off
+  max-classes-per-file: off
+  prefer-destructuring: off
+  no-shadow: off
+  no-bitwise: off
+  no-use-before-define: off
+  no-useless-constructor: off
+  no-nested-ternary: off
+  no-empty-function: off
+  no-unused-vars: off
+  no-plusplus: off
+  react/prop-types: off
+  import/extensions: off
+  import/prefer-default-export: off
+  import/no-absolute-path: off
+  import/no-extraneous-dependencies: off
+  import/no-named-as-default: off
+  '@typescript-eslint/no-shadow': [error]

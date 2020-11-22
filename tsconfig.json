@@ -1,26 +1,38 @@
 {
   "compilerOptions": {
-    "outDir": "./lib",
-    "target": "es5",
-    "module": "commonjs",
+    "jsx": "react",
     "strict": true,
+    "noEmit": true,
+    "target": "es5",
+    "sourceMap": true,
+    "outDir": "./lib",
+    "module": "esnext",
     "skipLibCheck": true,
     "noImplicitAny": true,
+    "removeComments": true,
+    "isolatedModules": true,
     "esModuleInterop": true,
     "strictNullChecks": true,
-    "removeComments": true,
-    "declaration": false,
-    "sourceMap": true,
-    "jsx": "react",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "typeRoots": [
       "index.d.ts",
       "node_modules/@types"
-    ]
+    ],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
   },
   "include": [
     "./src/**/*.tsx",
-    "./src/**/*.ts"
+    "./src/**/*.ts",
+    "index.d.ts"
   ],
   "exclude": [
     "node_modules",
