@@ -17,7 +17,6 @@ const printAllErrors = (errorCode: number) => {
     console.log('File has inappropriate extension');
   }
   if (InputErrorCode.containsMaxSizeError(errorCode)) {
-    console.log(errorCode.toString(2));
     console.log('File size exceeded max size specified');
   }
 };

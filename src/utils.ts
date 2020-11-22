@@ -1,3 +1,4 @@
+import React from 'react';
 import { SizeUnit } from './types';
 
 /**
@@ -28,4 +29,18 @@ export function checkMaxSize(file: File, maxSize: number, sizeUnit: SizeUnit) {
       : sizeUnit === 'MB' ? file.size <= maxSize * 1048576
         : sizeUnit === 'GB' ? file.size <= maxSize * 1073741824
           : file.size <= maxSize);
+}
+
+/**
+ * Hook to retrieve previous value for state property.
+ * @author Cirill Usachov
+ * @param {T} value Tracked value
+ * @returns {T|undefined} Previous value
+ */
+export function usePrevious<T>(value: T) {
+  const ref = React.useRef<T>();
+  React.useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
 }

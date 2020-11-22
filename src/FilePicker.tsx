@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FilePickerProps } from './types';
 import { InputErrorCode } from './InputError';
-import { checkExtension, checkMaxSize } from './utils';
+import { checkExtension, checkMaxSize, usePrevious } from './utils';
 
 /**
  * Main component.
@@ -31,9 +31,12 @@ const FilePicker: React.FC<FilePickerProps> = ({
   const packedExt = extensions instanceof Array ? extensions : [extensions];
 
   const [file, setFile] = React.useState<File | null>(null);
+  const prevoiusFile = usePrevious(file);
 
   React.useEffect(() => {
-    if (file !== null) {
+    if (file === undefined && prevoiusFile !== undefined) {
+      setFile(null);
+    } else if (file !== null) {
       let errorCode = InputErrorCode.NoErrors;
       if (packedExt.length && !checkExtension(file, packedExt)) {
         errorCode |= InputErrorCode.InappropriateExtension;
