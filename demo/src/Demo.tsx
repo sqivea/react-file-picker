@@ -1,11 +1,11 @@
 import React from 'react';
-import FilePikcer, { InputErrorCode } from '../../lib';
+import FilePicker, { InputErrorCode } from '../../lib';
 
 const Demo: React.FC = () => (
-  <FilePikcer
+  <FilePicker
     maxSize={1}
     sizeUnit='MB'
-    accept={['.jpg', '.png']}
+    extensions={['.jpg', '.png']}
     onFilePicked={(file) => { console.log(`File name: ${file.name}`); }}
     onSuccess={() => { console.log('Success'); }}
     onError={(code) => { printAllErrors(code); }}
@@ -17,6 +17,7 @@ const printAllErrors = (errorCode: number) => {
     console.log('File has inappropriate extension');
   }
   if (InputErrorCode.containsMaxSizeError(errorCode)) {
+    console.log(errorCode.toString(2));
     console.log('File size exceeded max size specified');
   }
 };

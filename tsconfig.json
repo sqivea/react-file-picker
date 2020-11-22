@@ -10,7 +10,6 @@
     "declarationMap": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
-    "removeComments": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "strictNullChecks": true,

@@ -6,6 +6,8 @@
     "sourceMap": true,
     "outDir": "./build",
     "module": "commonjs",
+    "allowJs": true,
+    "checkJs": true,
     "declaration": true,
     "declarationMap": true,
     "skipLibCheck": true,

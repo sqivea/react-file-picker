@@ -2,25 +2,25 @@ import { SizeUnit } from './types';
 
 /**
  * Check if allowed file extensions contains the one the given file got.
- *
+ * @author Cirill Usachov
  * @param {File} file File to be checked
  * @param {string[]} extensions Allowed extensions
- * @returns Ok or not
+ * @returns {boolean} Ok or not
  */
 export function checkExtension(file: File, extensions: string[]) {
   const extension = file.name.split('.').pop()?.toLowerCase();
   return typeof extension !== 'undefined' && extensions
-    .map((ext) => ext.toLowerCase())
+    .map((ext) => ext.toLowerCase().replace('.', ''))
     .includes(extension);
 }
 
 /**
  * Check if given file does not exceed max allowed file size.
- *
+ * @author Cirill Usachov
  * @param {File} file File to be checked
  * @param {number} maxSize Max allowed size
- * @param {'B' | 'KB' | 'MB' | 'GB'} sizeUnit Size unit
- * @returns Ok or not
+ * @param {'B'|'KB'|'MB'|'GB'} sizeUnit Size unit
+ * @returns {boolean} Ok or not
  */
 export function checkMaxSize(file: File, maxSize: number, sizeUnit: SizeUnit) {
   return (

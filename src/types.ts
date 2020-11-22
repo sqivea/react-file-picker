@@ -1,14 +1,12 @@
-import { InputErrorCode } from './InputError';
-
 /**
  * File picker props.
  */
 export type FilePickerProps = {
   maxSize?: number;
   sizeUnit?: SizeUnit;
-  accept?: string | string[];
+  extensions?: string | string[];
   onSuccess?: (...args: any[]) => any;
-  onError?: (errorCode: number, ...args: any[]) => void;
+  onError?: (errorCode: number) => void;
   onFilePicked: (file: File) => void;
 };
 
